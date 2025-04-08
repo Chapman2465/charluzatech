@@ -1,3 +1,9 @@
+// ===== Button ======
+menuBtn.addEventListener('click', function() {
+  this.classList.toggle('active');
+  mainNav.classList.toggle('active');
+});
+
 // ===== Smooth Scroll =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
