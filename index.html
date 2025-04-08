@@ -349,17 +349,16 @@
                             <input type="tel" placeholder="Your Phone">
                         </div>
                         <div class="form-group">
-                            <select required>
-                                <option value="">Select Service</option>
-                                <option>Screen Replacement</option>
-                                <option>Battery Service</option>
-                                <option>Charging Issues</option>
-                                <option>Water Damage</option>
-                                <option>Other Repair</option>
+                            <select name="service" required>
+                              <option value="">Select Service Needed</option>
+                              <option>Phone Screen Replacement</option>
+                              <option>Battery Replacement</option>
+                              <option>Water Damage Repair</option>
+                              <option>Other Issue</option>
                             </select>
-                        </div>
+                          </div>
                         <div class="form-group">
-                            <textarea placeholder="Describe your issue..." required></textarea>
+                            <textarea name="issue" placeholder="Describe your device issue"></textarea>
                         </div>
                         <button type="submit" class="btn primary">Send Message</button>
                     </form>
