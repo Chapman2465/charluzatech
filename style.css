@@ -251,40 +251,42 @@ header .container {
     cursor: pointer;
 }
 
-.mobile-menu-btn span {
-    display: block;
-    position: absolute;
-    height: 2px;
-    width: 100%;
-    background: #000;
-    left: 0;
-    transition: all 0.3s ease;
+/* Hide mobile menu button by default */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
 }
 
-.mobile-menu-btn span:nth-child(1) {
-    top: 6px;
-}
-
-.mobile-menu-btn span:nth-child(2) {
-    top: 14px;
-}
-
-.mobile-menu-btn span:nth-child(3) {
-    top: 22px;
-}
-
-.mobile-menu-btn.active span:nth-child(1) {
-    transform: rotate(45deg);
-    top: 14px;
-}
-
-.mobile-menu-btn.active span:nth-child(2) {
-    opacity: 0;
-}
-
-.mobile-menu-btn.active span:nth-child(3) {
-    transform: rotate(-45deg);
-    top: 14px;
+/* Mobile styles */
+@media (max-width: 768px) {
+    /* Show mobile menu button */
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    /* Hide main nav by default */
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 60px; /* Adjust based on your header height */
+        left: 0;
+        width: 100%;
+        background: #fff;
+        z-index: 1000;
+    }
+    
+    /* Show nav when active */
+    .main-nav.active {
+        display: block;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+    }
 }
 
 /* Hero Section */

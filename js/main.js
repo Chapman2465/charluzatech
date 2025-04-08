@@ -1,7 +1,19 @@
 // ===== Button ======
-menuBtn.addEventListener('click', function() {
-  this.classList.toggle('active');
-  mainNav.classList.toggle('active');
+document.addEventListener('DOMContentLoaded', function() {
+  const menuBtn = document.querySelector('.mobile-menu-btn');
+  const mainNav = document.querySelector('.main-nav');
+  
+  menuBtn.addEventListener('click', function() {
+      mainNav.classList.toggle('active');
+  });
+  
+  // Optional: Close menu when clicking on a link
+  const navLinks = document.querySelectorAll('.main-nav a');
+  navLinks.forEach(link => {
+      link.addEventListener('click', function() {
+          mainNav.classList.remove('active');
+      });
+  });
 });
 
 // ===== Smooth Scroll =====
